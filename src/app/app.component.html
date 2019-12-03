@@ -1,44 +1,12 @@
-<mat-toolbar color="primary" class="demo-app-header">
-  <div style="display:block;width:150px;">
-      <img src="../assets/img/angular2-logo-red.png" style="height:60px;padding-left:30px;text-align:center;"/>
-  </div>
-
-
-  <button mat-icon-button (click)="sideNav.toggle()">
-    <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon>
-  </button>
-
-  <span>Angular 8 & Angular Material Demo</span>
-
-  <!-- 在這之後的都會被推到右邊去 -->
-  <span class="toolbar-seprator"></span>
-
-  <button mat-icon-button>
-    <mat-icon>message</mat-icon>
-  </button>
-  <button mat-icon-button>
-    <mat-icon>exit_to_app</mat-icon>
-  </button>
-</mat-toolbar>
-
+<app-top-nav class="fixed-topnav" fxHide.gt-xs></app-top-nav>
 <mat-sidenav-container>
-  <mat-sidenav #sideNav>
-
+  <mat-sidenav #appDrawer mode="over" opened="false">
     <mat-nav-list>
-      <!-- <a mat-list-item href="https://www.creative-tim.com"><img src="../assets/img/angular2-logo-red.png" style="width:32px;"/><div style="width:8px;"></div>Creative Tim</a> -->
-      <!-- <a mat-list-item href="https://www.creative-tim.com"><img src="../assets/img/angular8-logo.png" style="width:150px;"/></a> -->
-      <a mat-list-item [routerLink]="'/dashboard'" (click)="sideNav.toggle()"> <mat-icon>dashboard</mat-icon><div style="width:15px;"></div> Dashboard</a>
-      <a mat-list-item [routerLink]="'/pageslayout'" (click)="sideNav.toggle()"> <mat-icon>pages</mat-icon><div style="width:15px;"></div>Pages Layout</a>
-      <a mat-list-item [routerLink]="'/forms'" (click)="sideNav.toggle()"><mat-icon>open_in_browser</mat-icon><div style="width:15px;"></div>Forms</a>
-      <a mat-list-item [routerLink]="'/table'" (click)="sideNav.toggle()"><mat-icon>grid_on</mat-icon><div style="width:15px;"></div>Table</a>
-      <a mat-list-item [routerLink]="'/widget'" (click)="sideNav.toggle()"><mat-icon>widgets</mat-icon><div style="width:15px;"></div>Widget</a>
-      <a mat-list-item [routerLink]="'/maps'" (click)="sideNav.toggle()"><mat-icon>map</mat-icon><div style="width:15px;"></div>Maps</a>
-      <a mat-list-item (click)="sideNav.toggle()" href="" mat-list-item><mat-icon>info</mat-icon><div style="width:15px;"></div> Close</a>
+      <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <div style="height: 88vh;">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
+  <!-- <app-top-nav fxHide.xs></app-top-nav> -->
+  <router-outlet></router-outlet>
+  <div fxFlex></div>
+  <span class="version-info">Current build: {{version.full ? version.full : version}}</span>
 </mat-sidenav-container>
