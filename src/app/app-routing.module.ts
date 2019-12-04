@@ -8,13 +8,22 @@ import { WidgetComponent } from './widget/widget.component';
 import { MapsComponent } from './maps/maps.component';
 
 const routes: Routes = [
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'pageslayout', component: PageslayoutComponent},
-  {path: 'forms', component: FormsComponent},
+  {path: '', component: DashboardComponent, pathMatch: 'full'},
+  {path: 'dashboards', children: [
+    {path: 'dashboard1', component: DashboardComponent},
+    {path: 'dashboard2', component: DashboardComponent}
+  ]},
+  {path: 'pages', children: [
+    {path: 'pageslayout1', component: PageslayoutComponent},
+    {path: 'pageslayout2', component: PageslayoutComponent}
+  ]},
+  {path: 'forms', children: [
+    {path: 'forms1', component: FormsComponent},
+    {path: 'forms2', component: FormsComponent}
+  ]},
   {path: 'table', component: TableComponent},
   {path: 'widget', component: WidgetComponent},
-  {path: 'maps', component: MapsComponent},
-  {path: '', component: DashboardComponent}
+  {path: 'maps', component: MapsComponent}
 ];
 
 @NgModule({
