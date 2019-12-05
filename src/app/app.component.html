@@ -2,6 +2,13 @@
 <mat-sidenav-container>
   <mat-sidenav #appDrawer mode="over" opened="false">
     <mat-nav-list>
+    <div class="sidenav-title">
+        <a href="https://www.creative-tim.com" class="simple-text">
+        <img src="/assets/img/angular2-logo-red.png"/>
+      </a>
+      <span>Creative Tim</span>
+    </div>
+
       <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
     </mat-nav-list>
   </mat-sidenav>

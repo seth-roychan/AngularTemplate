@@ -15,7 +15,7 @@ export class AppComponent implements AfterViewInit {
   version = VERSION;
   navItems: NavItem[] = [
     {
-      displayName: ' Dashboards',
+      displayName: 'Dashboards ',
       iconName: 'dashboard',
       route: 'dashboards',
       children: [
@@ -32,7 +32,7 @@ export class AppComponent implements AfterViewInit {
       ]
     },
     {
-      displayName: 'Angular Material UI',
+      displayName: 'Angular Material UI ',
       iconName: 'dashboard',
       route: 'dashboards',
       children: [
@@ -49,24 +49,24 @@ export class AppComponent implements AfterViewInit {
       ]
     },
     {
-      displayName: 'Pages',
+      displayName: 'Pages ',
       iconName: 'videocam',
       route: 'pages',
       children: [
         {
           displayName: 'Page-1',
           iconName: 'star_rate',
-          route: 'pages/page1'
+          route: 'pages/pageslayout1'
         },
         {
           displayName: 'Page-2',
           iconName: 'star_rate',
-          route: 'pages/page2'
+          route: 'pages/pageslayout2'
         }
       ]
     },
     {
-      displayName: 'Apps',
+      displayName: 'Apps ',
       iconName: 'movie_filter',
       children: [
         {
@@ -82,7 +82,7 @@ export class AppComponent implements AfterViewInit {
       ]
     },
     {
-      displayName: 'Forms',
+      displayName: 'Forms ',
       disabled: true,
       iconName: 'report_problem',
       children: [
@@ -99,7 +99,7 @@ export class AppComponent implements AfterViewInit {
       ]
     },
     {
-      displayName: 'Tables',
+      displayName: 'Tables ',
       iconName: 'person',
       route: 'tables',
       children: [
@@ -133,7 +133,7 @@ export class AppComponent implements AfterViewInit {
       ]
     },
     {
-      displayName: 'Maps',
+      displayName: 'Maps ',
       iconName: 'group',
       children: [
         {
@@ -147,6 +147,21 @@ export class AppComponent implements AfterViewInit {
           route: 'maps/map2'
         }
       ]
+    },
+    {
+      displayName: 'Typography',
+      iconName: 'star_rate',
+      route: 'typography'
+    },
+    {
+      displayName: 'Icons',
+      iconName: 'star_rate',
+      route: 'icons'
+    },
+    {
+      displayName: 'Notifications',
+      iconName: 'star_rate',
+      route: 'notifications'
     }
   ];
 

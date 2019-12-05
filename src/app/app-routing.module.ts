@@ -6,6 +6,9 @@ import { FormsComponent } from './forms/forms.component';
 import { TableComponent } from './table/table.component';
 import { WidgetComponent } from './widget/widget.component';
 import { MapsComponent } from './maps/maps.component';
+import { IconsComponent } from './icons/icons.component';
+import { TypographyComponent } from './typography/typography.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 const routes: Routes = [
   {path: '', component: DashboardComponent, pathMatch: 'full'},
@@ -21,9 +24,15 @@ const routes: Routes = [
     {path: 'forms1', component: FormsComponent},
     {path: 'forms2', component: FormsComponent}
   ]},
+  {path: 'maps', children: [
+    {path: 'map1', component: MapsComponent},
+    {path: 'map2', component: MapsComponent}
+  ]},
   {path: 'table', component: TableComponent},
   {path: 'widget', component: WidgetComponent},
-  {path: 'maps', component: MapsComponent}
+  {path: 'icons', component: IconsComponent},
+  {path: 'typography', component: TypographyComponent},
+  {path: 'notifications', component: NotificationsComponent}
 ];
 
 @NgModule({

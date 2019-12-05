@@ -14,6 +14,9 @@ import { WidgetComponent } from './widget/widget.component';
 import { MapsComponent } from './maps/maps.component';
 import { NavService } from './nav.service';
 import { TopNavComponent } from './top-nav/top-nav.component';
+import { IconsComponent } from './icons/icons.component';
+import { TypographyComponent } from './typography/typography.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { TopNavComponent } from './top-nav/top-nav.component';
     TableComponent,
     WidgetComponent,
     MapsComponent,
-    TopNavComponent
+    TopNavComponent,
+    IconsComponent,
+    TypographyComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,

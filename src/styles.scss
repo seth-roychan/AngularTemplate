@@ -10,13 +10,38 @@
 @include angular-material-theme($app-theme);
 
 body {
-  margin: 0;
+  margin: 20;
   height: 100vh;
   font-family: Roboto, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #292a1d;
 }
 a {
   text-decoration-color: mat-color($app-primary);
   color: mat-color($app-primary);
 }
+
+
+.sidenav-title {
+  display:inline-block;
+  text-align:center;
+  height:40px;
+  img{
+    width: 40px;
+    vertical-align:middle;
+    margin-left:15px;
+    margin-right:30px;
+    max-height: 40px;
+  }
+}
+
+
+.logo-img{
+  width: 35px;
+  display: block;
+
+  vertical-align:middle;
+
+}
+
+
