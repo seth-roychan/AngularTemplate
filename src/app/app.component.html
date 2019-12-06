@@ -1,19 +1,21 @@
 <app-top-nav class="fixed-topnav" fxHide.gt-xs></app-top-nav>
-<mat-sidenav-container>
-  <mat-sidenav #appDrawer mode="over" opened="false">
-    <mat-nav-list>
-    <div class="sidenav-title">
-        <a href="https://www.creative-tim.com" class="simple-text">
-        <img src="/assets/img/angular2-logo-red.png"/>
-      </a>
-      <span>Creative Tim</span>
-    </div>
+<div class="sidebar-wrapper">
+  <mat-sidenav-container>
+    <mat-sidenav #appDrawer mode="over" opened="false">
+      <mat-nav-list>
+      <div class="sidebar-logo">
+          <a href="https://www.creative-tim.com" class="simple-text">
+          <img src="/assets/img/angular2-logo-red.png"/>
+        </a>
+        <span>Creative Tim</span>
+      </div>
 
-      <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
-  <!-- <app-top-nav fxHide.xs></app-top-nav> -->
-  <router-outlet></router-outlet>
-  <div fxFlex></div>
-  <span class="version-info">Current build: {{version.full ? version.full : version}}</span>
-</mat-sidenav-container>
+        <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <!-- <app-top-nav fxHide.xs></app-top-nav> -->
+    <router-outlet></router-outlet>
+    <div fxFlex></div>
+    <span class="version-info">Current build: {{version.full ? version.full : version}}</span>
+  </mat-sidenav-container>
+</div>
